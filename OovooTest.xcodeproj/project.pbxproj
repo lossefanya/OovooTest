@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69C76992D39A74F8641D2A50 /* libPods-OovooTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3B4ACC806FD14D993F3689 /* libPods-OovooTest.a */; };
 		B19BA37F1B81F18400997D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BA37E1B81F18400997D17 /* main.m */; };
 		B19BA3821B81F18400997D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BA3811B81F18400997D17 /* AppDelegate.m */; };
 		B19BA3851B81F18400997D17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BA3841B81F18400997D17 /* ViewController.m */; };
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F3B4ACC806FD14D993F3689 /* libPods-OovooTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OovooTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		780587E46E2C8A66DC5360E6 /* Pods-OovooTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OovooTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-OovooTest/Pods-OovooTest.release.xcconfig"; sourceTree = "<group>"; };
+		9E10E75CFB131752C0341EE3 /* Pods-OovooTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OovooTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OovooTest/Pods-OovooTest.debug.xcconfig"; sourceTree = "<group>"; };
 		B19BA3791B81F18400997D17 /* OovooTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OovooTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19BA37D1B81F18400997D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B19BA37E1B81F18400997D17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C76992D39A74F8641D2A50 /* libPods-OovooTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05D629FF6E91720792F742DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E10E75CFB131752C0341EE3 /* Pods-OovooTest.debug.xcconfig */,
+				780587E46E2C8A66DC5360E6 /* Pods-OovooTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		254F68F5221C315C558FFAFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F3B4ACC806FD14D993F3689 /* libPods-OovooTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B19BA3701B81F18400997D17 = {
 			isa = PBXGroup;
 			children = (
 				B19BA37B1B81F18400997D17 /* OovooTest */,
 				B19BA3951B81F18400997D17 /* OovooTestTests */,
 				B19BA37A1B81F18400997D17 /* Products */,
+				05D629FF6E91720792F742DF /* Pods */,
+				254F68F5221C315C558FFAFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B19BA39C1B81F18400997D17 /* Build configuration list for PBXNativeTarget "OovooTest" */;
 			buildPhases = (
+				F3ACDD8AF70C70666DEFD9C6 /* Check Pods Manifest.lock */,
 				B19BA3751B81F18400997D17 /* Sources */,
 				B19BA3761B81F18400997D17 /* Frameworks */,
 				B19BA3771B81F18400997D17 /* Resources */,
+				5F51AE585F2329ECD3C4508D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F51AE585F2329ECD3C4508D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OovooTest/Pods-OovooTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3ACDD8AF70C70666DEFD9C6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B19BA3751B81F18400997D17 /* Sources */ = {
@@ -345,6 +404,7 @@
 		};
 		B19BA39D1B81F18400997D17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E10E75CFB131752C0341EE3 /* Pods-OovooTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OovooTest/Info.plist;
@@ -355,6 +415,7 @@
 		};
 		B19BA39E1B81F18400997D17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 780587E46E2C8A66DC5360E6 /* Pods-OovooTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OovooTest/Info.plist;
@@ -416,6 +477,7 @@
 				B19BA39E1B81F18400997D17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B19BA39F1B81F18400997D17 /* Build configuration list for PBXNativeTarget "OovooTestTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +486,7 @@
 				B19BA3A11B81F18400997D17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
