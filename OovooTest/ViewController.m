@@ -22,15 +22,20 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	
 	self.oovooClient = [ooVooClient sharedInstance];
 	[self.oovooClient authorizeClient:OOVOO_TOKEN completion:^(SdkResult *result) {
+		NSLog(@"ooVoo init: %@", result);
 		[self.oovooClient.Account login:@"tester" completion:^(SdkResult *result) {
+			NSLog(@"ooVoo login: %@", result);
+			UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
 			VideoPanel *videoPanel = [[VideoPanel alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+			[view addSubview:videoPanel];
 			self.oovooClient.AVChat.delegate = self;
 			self.oovooClient.AVChat.VideoController.delegate = self;
 			[self.oovooClient.AVChat.VideoController bindVideoRender:nil render:videoPanel];
 			[self.oovooClient.AVChat.VideoController openCamera];
-			[[KGModal sharedInstance] showWithContentView:videoPanel];
+			[[KGModal sharedInstance] showWithContentView:view];
 		}];
 	}];
 }
